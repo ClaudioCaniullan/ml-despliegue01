@@ -13,13 +13,13 @@ if __name__ == "__main__":
 
     # definir features y target
     X, y = utils.features_target(data, ['score','rank', 'country'],['score'])
-    
+
     # entrenar modelo
     models.grid_training(X,y)
     
 
 
-    # probar salida en con sola con
+    # probar salida en consola con
     # print(data)
 
     
