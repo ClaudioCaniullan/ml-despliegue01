@@ -22,6 +22,7 @@ class Models:
                'gamma' : ['auto', 'scale'],
                'C' : [1,5,10]
         }
+        }
 
     def grid_training(self, X,y):
 
