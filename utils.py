@@ -16,5 +16,5 @@ class Utils:
 
     # funcion exportar modelo, clf clasificador
     def model_export(self, clf, score):
-        print("score training:", score)
+        print("score model training:", score)
         joblib.dump(clf, './models/best_model.pkl')
