@@ -15,7 +15,7 @@ if __name__ == "__main__":
     data = utils.load_from_csv('./in/data2.csv')
 
     # definir features y target
-    X, y = utils.features_target(data, ['PassengerId', 'HomePlanet', 'CryoSleep', 'Cabin', 'Destination', 'VIP', 'Name', 'Transported_False'],['Transported_True'])
+    X, y = utils.features_target(data, ['PassengerId', 'HomePlanet', 'CryoSleep', 'Cabin', 'Destination', 'VIP', 'Name', 'Transported_False','Transported_True'],['Transported_True'])
 
     # entrenar modelo
     models.grid_training(X,y)
