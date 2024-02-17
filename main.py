@@ -13,10 +13,9 @@ if __name__ == "__main__":
     
     # cargar data desde carpeta in
     data = utils.load_from_csv('./in/data2.csv')
-    print((data))
 
     # definir features y target
-    X, y = utils.features_target(data, ['ShoppingMall', 'Spa', 'VRDeck'],['Transported_True'])
+    X, y = utils.features_target(data, ['PassengerId', 'HomePlanet', 'CryoSleep', 'Cabin', 'Destination', 'VIP', 'Name', 'Transported_False'],['Transported_True'])
 
     # entrenar modelo
     models.grid_training(X,y)
@@ -24,7 +23,7 @@ if __name__ == "__main__":
     # realizar prediction
     model = joblib.load('./models/best_model.pkl')
     # construir X_test de prueba para prediccion
-    X_test = np.array([1.0,2.0,73.0])
+    X_test = np.array([39.0,0.0,0.0,0.0,0.0,0.0])
     prediction = model.predict(X_test.reshape(1,-1))
     print("prediccion score con SVR:",prediction)
     

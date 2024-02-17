@@ -1,8 +1,11 @@
 import pandas as pd
 import numpy as np
 
-from sklearn.svm import SVR
+from sklearn.svm import SVC
+
+
 from sklearn.ensemble import GradientBoostingRegressor
+
 from sklearn.model_selection import GridSearchCV
 
 from utils import Utils
@@ -12,12 +15,12 @@ class Models:
     # modelos utilizar
     def __init__(self):
         self.reg = {
-            'SVR' : SVR(),
+            'svm' : SVC(),
         }
         
         # parametros a optimizar
         self.params = {
-           'SVR' : {
+           'svm' : {
                'kernel' : ['linear', 'poly', 'rbf'],
                'gamma' : ['auto', 'scale'],
                'C' : [1,5,10]
