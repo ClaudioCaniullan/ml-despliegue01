@@ -1,0 +1,1 @@
+En esta carpeta models se debe guardar por defecto el mejor modelo pkl generado por el archivo main 
